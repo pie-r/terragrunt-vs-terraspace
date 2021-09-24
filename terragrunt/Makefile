@@ -54,7 +54,7 @@ dev-ec2-destroy:
 #### SHARED PLAN DEV ####
 dev-plan-all:
 	@echo $@  # print target name
-	source ../accounts/dev-account.sh && cd ./dev-account/eu-central-1/test/ && terragrunt apply-all plan
+	source ../accounts/dev-account.sh && cd ./dev-account/eu-central-1/test/ && terragrunt plan-all
 
 #### APPLY ALL DEV ####
 # I prefer to manually manage the apply all
@@ -71,7 +71,7 @@ dev-run-all:
 #### SHARED PLAN TEST ####
 test-plan-all-test:
 	@echo $@  # print target name
-	source ../accounts/test-account.sh && cd ./test-account/eu-central-1/test/ && terragrunt apply-all plan
+	source ../accounts/test-account.sh && cd ./test-account/eu-central-1/test/ && terragrunt plan-all
 
 #### VPC ####
 test-vpc-plan:
@@ -104,7 +104,7 @@ test-ec2-destroy:
 #### SHARED PLAN QA ####
 qa-plan-all-qa:
 	@echo $@  # print target name
-	source ../accounts/test-account.sh && cd ./test-account/eu-central-1/qa/ && terragrunt apply-all plan
+	source ../accounts/test-account.sh && cd ./test-account/eu-central-1/qa/ && terragrunt plan-all
 
 
 #### VPC ####
