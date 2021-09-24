@@ -27,3 +27,37 @@ override.tf.json
 
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
+
+# Terragrunt
+.terragrunt-cache
+
+# Terraspace
+.terraspace-cache
+.terraform.lock.hcl
+
+# OS X files
+.history
+.DS_Store
+
+# Common ruby files
+*.gem
+*.rbc
+.idea
+/.bundle
+/.config
+/.yardoc
+/_yardoc
+/coverage
+/doc/
+/Gemfile.lock
+/InstalledFiles
+/lib/bundler/man
+/log
+/output
+/pkg
+/rdoc
+/spec/fixtures/project/output
+/spec/reports
+/test/tmp
+/test/version_tmp
+/tmp
