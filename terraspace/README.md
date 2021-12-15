@@ -89,3 +89,9 @@ This mechanism is applied everywhere, also for the `tfvars` shared across all th
 In the `Makefile` the only thing to do is to configure the correct credentials to use.
 
 `source ./../accounts/dev-account.sh` is the command to load the environment variables stored in that script.
+
+## Multi region
+
+The multi region is given with the method described here: https://terraspace.cloud/docs/tfvars/multi-region-layering/
+
+The env variable is configured in the `accounts/env-account.sh`. I suggest to move the env variable away from this file, and configure it in the makefile.
