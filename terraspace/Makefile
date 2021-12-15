@@ -60,3 +60,52 @@ dev-run:
 dev-destroy:
 	@echo $@  # print target name
 	source ./../accounts/dev-account.sh && export TS_ENV="qa" && cd infrastructure && bundle exec terraspace all down
+
+
+#############################
+####### TEST ACCOUNT ########
+#############################
+
+# not override the files. See with the diff proposed by terraspace which are the difference between the default new project, and mine
+test-init:
+	@echo $@  # print target name
+	source ./../accounts/test-account.sh && export TS_ENV="qa" terraspace new project infrastructure --plugin aws
+
+
+# vpc
+test-vpc-plan:
+	@echo $@  # print target name
+	source ./../accounts/test-account.sh && export TS_ENV="qa" && cd infrastructure && bundle exec "terraspace plan vpc-service"
+
+test-vpc-run:
+	@echo $@  # print target name
+	source ./../accounts/test-account.sh && export TS_ENV="qa" && cd infrastructure && bundle exec terraspace up vpc-service
+
+test-vpc-destroy:
+	@echo $@  # print target name
+	source ./../accounts/test-account.sh && export TS_ENV="qa" && cd infrastructure && bundle exec terraspace down vpc-service
+
+# ec2
+test-ec2-plan:
+	@echo $@  # print target name
+	source ./../accounts/test-account.sh && export TS_ENV="qa" && cd infrastructure && bundle exec "terraspace plan ec2-service"
+
+test-ec2-run:
+	@echo $@  # print target name
+	source ./../accounts/test-account.sh && export TS_ENV="qa" && cd infrastructure && bundle exec terraspace up ec2-service
+
+test-ec2-destroy:
+	@echo $@  # print target name
+	source ./../accounts/test-account.sh && export TS_ENV="qa" && cd infrastructure && bundle exec terraspace down ec2-service
+
+
+
+# create all the resources with a single command
+test-run:
+	@echo $@  # print target name
+	source ./../accounts/test-account.sh && export TS_ENV="qa" && cd infrastructure && bundle exec terraspace all up
+
+# destroy all
+test-destroy:
+	@echo $@  # print target name
+	source ./../accounts/test-account.sh && export TS_ENV="qa" && cd infrastructure && bundle exec terraspace all down
