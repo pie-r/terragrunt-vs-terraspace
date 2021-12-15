@@ -71,12 +71,12 @@ Where:
 
 In the `Makefile` in each command there is an export like `TS_ENV="qa"`.
 
-With this parameter, we are going to configure `terraspace` to merge two files that exist in this folder `terraspace/infrastructure/app/stacks/ec2-service/tfvars`:
+With this syntax, we are going to configure `terraspace` to merge two files that exist in this folder `terraspace/infrastructure/app/stacks/ec2-service/tfvars`:
 
 1. `base.tfvars`
 2. `qa.tfvars`
 
-Do you want to configure in a different way the test environment?
+Do you want to configure in a different way the `test` environment?
 Simply configure `TS_ENV="test"` that will merge:
 
 1. `base.tfvars`
