@@ -1,5 +1,14 @@
 # Terragrunt vs Terraspace
 
+This repository is part of a series of articles published in medium:
+
+- [Terragrunt](bit.ly/2YfWRED)
+- [Terraspace](bit.ly/3o2DrMV)
+
+I strongly recommend to took a look there, before proceed with this repository.
+
+---
+
 This repo tries to create two resources (VPC + EC2) using Terragrunt and Terraspace.
 
 It's not a fork, but is very similar to this repository: https://github.com/gruntwork-io/terragrunt-infrastructure-live-example
